@@ -11,7 +11,7 @@
 int main() {
     int tabuleiro[N][N] = {0};
 
-    // ---- Habilidade Cone (triângulo apontando para baixo) ----
+    //  Habilidade Cone (triângulo apontando para baixo)
     int altura = 4;
     int inicioColuna = 3;
     for (int i = 0; i < altura; i++) {
@@ -20,14 +20,14 @@ int main() {
         }
     }
 
-    // ---- Habilidade Cruz (linha + coluna cruzadas no centro) ----
+    //  Habilidade Cruz (linha + coluna cruzadas no centro) 
     int centro = N / 2;
     for (int i = 0; i < N; i++) {
         tabuleiro[centro][i] = 1; // linha horizontal
         tabuleiro[i][centro] = 1; // coluna vertical
     }
 
-    // ---- Habilidade Octaedro (diamante no centro) ----
+    // Habilidade Octaedro (diamante no centro) 
     int raio = 3;
     for (int i = -raio; i <= raio; i++) {
         for (int j = -raio; j <= raio; j++) {
@@ -41,7 +41,7 @@ int main() {
         }
     }
 
-    // ---- Exibir Tabuleiro ----
+    //  Exibir Tabuleiro 
     printf("Tabuleiro com habilidades especiais:\n");
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
