@@ -12,29 +12,29 @@
 int main() {
     int tabuleiro[LINHAS][COLUNAS] = {0};
 
-    // ---- Navio Vertical ----
+    //  Navio Vertical 
     int colunaVertical = 2;
     for (int i = 0; i < 4; i++) {
         tabuleiro[i][colunaVertical] = 3; // navio ocupa valor 3
     }
 
-    // ---- Navio Horizontal ----
+    //  Navio Horizontal 
     int linhaHorizontal = 5;
     for (int j = 0; j < 5; j++) {
         tabuleiro[linhaHorizontal][j] = 3;
     }
 
-    // ---- Navio Diagonal (principal ↘) ----
+    //  Navio Diagonal (principal ↘) 
     for (int k = 0; k < 4; k++) {
         tabuleiro[k][k] = 3;
     }
 
-    // ---- Navio Diagonal (secundária ↙) ----
+    //  Navio Diagonal (secundária ↙) 
     for (int k = 0; k < 4; k++) {
         tabuleiro[k][9 - k] = 3;
     }
 
-    // ---- Exibir Tabuleiro ----
+    //  Exibir Tabuleiro 
     printf("Tabuleiro 10x10:\n");
     for (int linha = 0; linha < LINHAS; linha++) {
         for (int coluna = 0; coluna < COLUNAS; coluna++) {
